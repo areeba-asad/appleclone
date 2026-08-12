@@ -1,0 +1,2866 @@
+/* =========================================
+   RESET
+========================================= */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    /*
+       Apple-style system font
+    */
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    color: #1d1d1f;
+
+    background: #fff;
+
+    /*
+       Makes text look smoother
+    */
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    width: 100%;
+
+    height: 52px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    position: relative;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================
+   NAV CONTAINER
+========================================= */
+
+.nav-container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   APPLE LOGO
+========================================= */
+
+.apple-logo {
+
+    width: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #1d1d1f;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.desktop-nav {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    /*
+       Navigation ke darmiyan gap
+    */
+
+    gap: 30px;
+}
+
+
+.nav-links li {
+
+    white-space: nowrap;
+}
+
+
+.nav-links a {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: 0.01em;
+
+    color: #1d1d1f;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: #777;
+}
+
+
+/* =========================================
+   NAVIGATION ICONS
+========================================= */
+
+.nav-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    flex-shrink: 0;
+}
+
+
+.nav-icons a {
+
+    color: #1d1d1f;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+}
+
+
+.nav-icons a:hover {
+
+    color: #777;
+}
+
+
+/* =========================================
+   IPHONE HERO SECTION
+========================================= */
+
+.iphone-section {
+
+    width: 100%;
+
+    /*
+       Navbar ke baad remaining screen
+    */
+
+    height: calc(100vh - 52px);
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f5f5f7;
+
+    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* =========================================
+   IPHONE BACKGROUND IMAGE
+========================================= */
+
+.iphone-bg {
+
+    position: absolute;
+
+    /*
+       Full section cover karegi
+    */
+
+    width: 100%;
+
+    height: 100%;
+
+    left: 0;
+
+    top: 0;
+
+    z-index: 1;
+
+    object-fit: cover;
+
+    /*
+       Image ka bottom part visible rahe
+    */
+
+    object-position: center bottom;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TEXT CONTENT
+========================================= */
+
+.iphone-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding-top: 28px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   iPHONE HEADING
+========================================= */
+
+.iphone-content h1 {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 56px;
+
+    line-height: 1.07143;
+
+    font-weight: 600;
+
+    letter-spacing: -0.005em;
+
+    color: #1d1d1f;
+
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+.iphone-content p {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 26px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+
+    letter-spacing: 0.004em;
+
+    color: #1d1d1f;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   BOTH BUTTONS
+========================================= */
+
+.learn-btn,
+.shop-btn {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    height: 44px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 980px;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    letter-spacing: -0.01em;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =========================================
+   LEARN MORE BUTTON
+========================================= */
+
+.learn-btn {
+
+    background: #0071e3;
+
+    color: #fff;
+
+    border: 1px solid #0071e3;
+}
+
+
+.learn-btn:hover {
+
+    background: #0077ed;
+
+    border-color: #0077ed;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   SHOP IPHONE BUTTON
+========================================= */
+
+.shop-btn {
+
+    background: rgba(255, 255, 255, 0.25);
+
+    color: #0071e3;
+
+    border: 1px solid #0071e3;
+
+    backdrop-filter: blur(5px);
+}
+
+
+.shop-btn:hover {
+
+    background: #0071e3;
+
+    color: #fff;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   LARGE SCREEN
+========================================= */
+
+@media (min-width: 1200px) {
+
+    .nav-container {
+
+        max-width: 1100px;
+    }
+
+
+    .nav-links {
+
+        gap: 32px;
+    }
+
+
+    .iphone-content {
+
+        padding-top: 30px;
+    }
+
+
+    .iphone-content h1 {
+
+        font-size: 58px;
+    }
+
+
+    .iphone-content p {
+
+        font-size: 27px;
+    }
+
+
+    .iphone-bg {
+
+        object-position: center bottom;
+    }
+}
+/* =========================
+   MACBOOK SECTION
+========================= */
+
+.macbook-section {
+    width: calc(100% - 24px);
+    height: 500px;
+
+    margin: 12px auto;
+
+    background: #eaf5f8;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+/* =========================
+   MACBOOK IMAGE - BACKGROUND
+========================= */
+
+.macbook-bg {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: none;
+
+    height: 100%;
+     object-fit: cover;
+    z-index: 2;
+}
+
+
+/* =========================
+   TEXT - IMAGE KE UPAR
+========================= */
+
+.macbook-content {
+    position: absolute;
+
+    top: 45px;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.macbook-content h1 {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 56px;
+
+    line-height: 1.07;
+
+    font-weight: 600;
+
+    letter-spacing: -0.005em;
+
+    color: #1d1d1f;
+
+    margin: 0 0 5px;
+}
+
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.macbook-content p {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+
+    color: #1d1d1f;
+
+    margin: 0 0 20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* Learn More */
+
+.learn-btn {
+    height: 44px;
+
+    padding: 0 22px;
+
+    border-radius: 999px;
+
+    background: #0071e3;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Buy */
+
+.buy-btn {
+    height: 44px;
+
+    padding: 0 22px;
+
+    border-radius: 999px;
+
+    border: 1px solid #0071e3;
+
+    background: transparent;
+
+    color: #0071e3;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+/* =========================================
+   TWO PRODUCT SECTIONS
+========================================= */
+
+.product-pair {
+
+    width: calc(100% - 24px);
+
+    margin: 12px auto;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   EACH CARD
+========================================= */
+
+.product-card {
+
+    position: relative;
+
+    width: 50%;
+
+    height: 620px;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   iPAD BACKGROUND
+========================================= */
+
+.ipad-card {
+
+    background: #dff6fb;
+}
+
+
+/* =========================================
+   MACBOOK PRO BACKGROUND
+========================================= */
+
+.macbook-pro-card {
+
+    background: #050505;
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.product-bg {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -10px;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center bottom;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   TEXT OVER IMAGE
+========================================= */
+
+.product-content {
+
+    position: absolute;
+
+    top: 42px;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 0 20px;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.product-content h2 {
+
+    margin: 0 0 6px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 42px;
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    letter-spacing: -0.005em;
+
+    color: #1d1d1f;
+}
+
+
+/* iPad Air blue word */
+
+.ipad-card h2 span {
+
+    color: #54a9df;
+
+    font-weight: 500;
+
+    font-style: italic;
+}
+
+
+/* MacBook Pro white text */
+
+.macbook-pro-card h2 {
+
+    color: #f5f5f7;
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+.product-content p {
+
+    margin: 0 0 18px;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    letter-spacing: 0.004em;
+
+    color: #1d1d1f;
+}
+
+
+/* MacBook paragraph */
+
+.macbook-pro-card p {
+
+    color: #f5f5f7;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.product-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   LEARN MORE
+========================================= */
+
+.learn-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 40px;
+
+    padding: 0 19px;
+
+    border-radius: 980px;
+
+    background: #0071e3;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   BUY BUTTON
+========================================= */
+
+.buy-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 40px;
+
+    padding: 0 19px;
+
+    border-radius: 980px;
+
+    background: transparent;
+
+    border: 1px solid #0071e3;
+
+    color: #0071e3;
+
+    text-decoration: none;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   MACBOOK BUTTON
+========================================= */
+
+.macbook-pro-card .buy-btn {
+
+    border-color: #2997ff;
+
+    color: #2997ff;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.learn-btn:hover {
+
+    background: #0077ed;
+}
+
+.buy-btn:hover {
+
+    background: rgba(0, 113, 227, 0.08);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.apple-products {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+}
+
+
+/* BOX */
+
+.apple-box {
+    position: relative;
+    width: 50%;
+    height: 580px;
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.product-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+}
+
+
+/* TEXT IMAGE KE UPER */
+
+.product-content {
+    position: absolute;
+
+    top: 55px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    z-index: 2;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+}
+
+
+/* HEADING */
+
+.product-content h2 {
+    font-size: 40px;
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    letter-spacing: -1.2px;
+
+}
+
+.product-content h2 span {
+    font-weight: 400;
+}
+
+
+/* PARAGRAPH */
+
+.product-content p {
+    margin-top: 9px;
+
+    font-size: 22px;
+    line-height: 1.2;
+
+    font-weight: 400;
+}
+
+
+/* IPAD TEXT WHITE */
+
+.ipad-content h2,
+.ipad-content p {
+    color: #f5f5f7;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+
+/* COMMON BUTTON */
+
+.buttons a {
+    height: 44px;
+
+    padding: 0 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+.buttons:hover{
+    color: #0071e3;
+}
+
+
+/* LEARN MORE */
+
+.learn {
+    background: #0071e3;
+    color: white;
+}
+
+
+/* BUY */
+
+.buy {
+    color: #0071e3;
+
+    border: 1px solid #0071e3;
+
+    background: transparent;
+}
+
+
+/* IPAD BUY */
+
+.ipad-content .buy {
+    color: #2997ff;
+    border-color: #2997ff;
+}
+/* ==============================
+   TRADE IN + CARD SECTION
+   ============================== */
+
+.trade-card-section {
+    width: 100%;
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 12px;
+}
+
+
+/* ==============================
+   EACH BOX
+   ============================== */
+
+.trade-box {
+    position: relative;
+
+    width: 50%;
+
+    height: 580px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background: #f5f5f7;
+}
+
+
+/* ==============================
+   BACKGROUND IMAGE
+   ============================== */
+
+.bg-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+}
+
+
+/* ==============================
+   TEXT
+   ============================== */
+
+.section-content {
+    position: absolute;
+
+    top: 55px;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 2;
+
+    text-align: center;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+}
+
+
+/* ==============================
+   HEADING
+   ============================== */
+
+.section-content h2 {
+    margin: 0;
+
+    font-size: 40px;
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+    color: #1d1d1f;
+}
+
+
+/* ==============================
+   PARAGRAPH
+   ============================== */
+
+.section-content p {
+    margin-top: 10px;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    letter-spacing: -0.4px;
+
+    color: #1d1d1f;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* ==============================
+   BLUE BUTTON
+   ============================== */
+
+.blue-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 44px;
+
+    padding: 0 21px;
+
+    border-radius: 999px;
+
+    background: #0071e3;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+}
+
+
+/* ==============================
+   OUTLINE BUTTON
+   ============================== */
+
+.outline-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 44px;
+
+    padding: 0 21px;
+
+    border-radius: 999px;
+
+    border: 1px solid #0071e3;
+
+    background: transparent;
+
+    color: #0071e3;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+/* ==============================
+   HOVER
+   ============================== */
+
+.blue-button:hover {
+    background: #0077ed;
+}
+
+.outline-button:hover {
+    background: #0071e3;
+
+    color: white;
+}
+/* ================================
+   ENTERTAINMENT SECTION
+================================ */
+
+.entertainment-section {
+    background: #f5f5f7;
+    padding: 20px 0 0 0;
+    overflow: hidden;
+}
+
+.entertainment-section h2 {
+    font-family: -apple-system, BlinkMacSystemFont,
+        "SF Pro Display", "SF Pro Text",
+        Helvetica, Arial, sans-serif;
+
+    font-size: 56px;
+    line-height: 1.05;
+    font-weight: 700;
+
+    letter-spacing: -2px;
+
+    color: #1d1d1f;
+
+    margin: 0 auto 45px;
+
+    max-width: 1200px;
+    padding: 0 ;
+    align-items: center;
+}
+
+
+/* ================================
+   SLIDER
+================================ */
+
+.entertainment-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* ================================
+   TRACK
+================================ */
+
+.entertainment-track {
+    display: flex;
+
+    gap: 20px;
+
+    width: max-content;
+
+    transform: translateX(0);
+
+    transition: transform 0.6s
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    padding-left: 20px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.entertainment-card {
+
+    position: relative;
+
+    width: 800px;
+    height: 500px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border-radius: 0;
+}
+
+
+/* IMAGE */
+
+.entertainment-card img {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* IMAGE ZOOM */
+
+.entertainment-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ================================
+   DARK GRADIENT
+================================ */
+
+.entertainment-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 55%;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+
+    z-index: 2;
+}
+
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.card-content {
+
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 45px;
+
+    left: 25px;
+    right: 25px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+
+/* CARD TITLE */
+
+.card-content h3 {
+
+    font-size: 30px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    margin: 0 0 18px;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* CARD PARAGRAPH */
+
+.card-content p {
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    font-weight: 400;
+
+    margin: 0 auto 28px;
+
+    max-width: 310px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.card-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0 24px;
+
+    border-radius: 24px;
+
+    background: white;
+
+    color: #1d1d1f;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+
+.card-btn:hover {
+
+    background: #f5f5f7;
+
+    transform: scale(1.03);
+}
+
+
+/* ================================
+   SLIDER BUTTONS
+================================ */
+
+.slider-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.slider-buttons button {
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d2d2d7;
+
+    color: #1d1d1f;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+
+.slider-buttons button:hover {
+
+    background: #b8b8bd;
+}
+/* Entertainment Section */
+
+.entertainment-section {
+    background: #f5f5f7;
+    padding: 20px 0 20px;
+    overflow: hidden;
+}
+
+.entertainment-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 40px;
+    padding-left: 7%;
+    color: #1d1d1f;
+    align-items: center;
+}
+
+/* Slider */
+
+.slider {
+    display: flex;
+    gap: 24px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    padding: 0 7% 20px;
+
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards */
+
+.ent-card {
+    position: relative;
+
+    flex: 0 0 500px;
+    height: 500px;
+
+    scroll-snap-align: center;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+/* Background Image */
+
+.ent-card img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    inset: 0;
+}
+
+/* Dark gradient over image */
+
+.ent-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 35%,
+        rgba(0,0,0,0.15) 50%,
+        rgba(0,0,0,0.85) 100%
+    );
+}
+
+/* Text */
+
+.card-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 35px;
+    right: 35px;
+    bottom: 45px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.card-content h3 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.card-content p {
+    font-size: 24px;
+    line-height: 1.3;
+
+    margin-bottom: 30px;
+}
+
+.card-content a {
+    display: inline-block;
+
+    background: white;
+    color: #111;
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+}
+
+/* Dots */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+.dots span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #888;
+}
+
+.dots .active {
+    width: 45px;
+    border-radius: 10px;
+    background: #111;
+}
+/* =========================
+   LEGAL / DISCLAIMER SECTION
+========================= */
+
+.legal-section {
+    width: 100%;
+    box-sizing: border-box;
+    background: #f5f5f7;
+    padding:0 0 9.6px;
+
+    color: #6e6e73;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 1.45;
+}
+
+.legal-section p {
+    margin: 0 0 20px 0;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section span {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.legal-section a {
+    color: #555;
+    text-decoration: underline;
+}
+
+.legal-section a:hover {
+    color: #000;
+}
+
+/* =========================
+   APPLE STYLE FOOTER
+========================= */
+.footer-line{
+    width: 100%;
+
+    background-color: #d2d2d7;
+    margin: 0;
+    border-top: #d2d2d7;
+}
+.apple-footer {
+    background: #f5f5f7;
+    color: #6e6e73;
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "SF Pro Text", "Helvetica Neue",
+                 Arial, sans-serif;
+
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 25px 0 20px;
+}
+
+
+/* MAIN CONTAINER */
+
+.footer-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 35px;
+}
+
+
+/* COLUMN */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* HEADINGS */
+
+.footer-column h3 {
+    color: #1d1d1f;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin: 0 0 10px;
+}
+
+
+/* LINKS */
+
+.footer-column a {
+    color: #6e6e73;
+    text-decoration: none;
+
+    margin-bottom: 8px;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+
+/* SPACE BETWEEN GROUPS */
+
+.footer-column h3:not(:first-child) {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   BOTTOM AREA
+========================= */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+
+/* MORE WAYS TO SHOP */
+
+.shop-text {
+    margin: 0 0 20px;
+}
+
+.shop-text a {
+    color: #424245;
+    text-decoration: underline;
+}
+
+
+/* LINE */
+
+.footer-line {
+    height: 1px;
+    background: #d2d2d7;
+    margin-bottom: 15px;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+/* LEGAL LINKS */
+
+.legal-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legal-links a {
+    color: #6e6e73;
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+/* COUNTRY */
+
+.country {
+    color: #6e6e73;
+    text-decoration: none;
+}
+
+.country:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 30px;
+    }
+
+    .copyright {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .apple-footer {
+        padding: 25px 0 20px;
+    }
+
+    .footer-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    /* Mobile groups */
+
+    .footer-column {
+        border-bottom: 1px solid #d2d2d7;
+        padding: 16px 0;
+    }
+
+
+    .footer-column h3 {
+        font-size: 13px;
+        margin: 0;
+    }
+
+
+    .footer-column a {
+        font-size: 13px;
+    }
+
+
+    .footer-column h3:not(:first-child) {
+        margin-top: 20px;
+    }
+
+
+    .footer-bottom {
+        width: 88%;
+        margin-top: 25px;
+    }
+
+
+    .shop-text {
+        line-height: 1.5;
+    }
+
+
+    .copyright {
+        display: block;
+        line-height: 1.6;
+    }
+
+
+    .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 8px;
+        margin-top: 8px;
+    }
+
+
+    .country {
+        display: block;
+        margin-top: 10px;
+    }
+
+}
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    .legal-section {
+        padding: 30px 4%;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .legal-section {
+        padding: 24px 28px;
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .legal-section p {
+        margin-bottom: 22px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .entertainment-section {
+        padding: 55px 0 40px;
+    }
+
+    .entertainment-section h2 {
+        font-size: 40px;
+        padding-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    .slider {
+        gap: 23px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .ent-card {
+        flex: 0 0 495px;
+        height: 890px;
+    }
+
+    .card-content {
+        bottom: 45px;
+    }
+
+    .card-content p {
+        font-size: 22px;
+    }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+
+    .entertainment-section h2 {
+
+        font-size: 44px;
+
+        padding-left: 25px;
+
+        margin-bottom: 35px;
+    }
+
+    .entertainment-card {
+
+        width: 330px;
+
+        height: 560px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .entertainment-section {
+
+        padding: 55px 0 40px;
+    }
+
+
+    .entertainment-section h2 {
+
+        font-size: 40px;
+
+        line-height: 1.05;
+
+        letter-spacing: -1.5px;
+
+        padding: 0 24px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .entertainment-track {
+
+        gap: 22px;
+
+        padding-left: 98px;
+    }
+
+
+    .entertainment-card {
+
+        width: 495px;
+
+        max-width: calc(100vw - 195px);
+
+        height: 640px;
+    }
+
+
+    .card-content {
+
+        bottom: 35px;
+
+        left: 20px;
+
+        right: 20px;
+    }
+
+
+    .card-content h3 {
+
+        font-size: 27px;
+    }
+
+
+    .card-content p {
+
+        font-size: 18px;
+
+        line-height: 1.35;
+    }
+
+
+    .slider-buttons {
+
+        display: none;
+    }
+}
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .trade-card-section {
+        flex-direction: column;
+
+        padding: 8px;
+
+        gap: 8px;
+    }
+
+    .trade-box {
+        width: 100%;
+
+        height: 520px;
+    }
+
+    .section-content {
+        top: 40px;
+    }
+
+    .section-content h2 {
+        font-size: 32px;
+    }
+
+    .section-content p {
+        font-size: 19px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .apple-products {
+        flex-direction: column;
+    }
+
+    .apple-box {
+        width: 100%;
+        height: 520px;
+    }
+
+    .product-content {
+        top: 40px;
+    }
+
+    .product-content h2 {
+        font-size: 32px;
+    }
+
+    .product-content p {
+        font-size: 19px;
+    }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .product-card {
+
+        height: 550px;
+    }
+
+    .product-content h2 {
+
+        font-size: 36px;
+    }
+
+    .product-content p {
+
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .product-pair {
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .product-card {
+
+        width: 100%;
+
+        height: 580px;
+    }
+
+    .product-content h2 {
+
+        font-size: 38px;
+    }
+
+    .product-content p {
+
+        font-size: 20px;
+    }
+}
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+
+        gap: 18px;
+    }
+
+
+    .nav-links a {
+
+        font-size: 11px;
+    }
+
+
+    .nav-icons {
+
+        gap: 16px;
+    }
+
+
+    .iphone-content h1 {
+
+        font-size: 50px;
+    }
+
+
+    .iphone-content p {
+
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        height: 48px;
+    }
+
+
+    .nav-container {
+
+        padding: 0 18px;
+    }
+
+
+    /*
+       Mobile par navigation hide
+    */
+
+    .desktop-nav {
+
+        display: none;
+    }
+
+
+    .apple-logo {
+
+        font-size: 18px;
+    }
+
+
+    .nav-icons {
+
+        gap: 20px;
+    }
+
+
+    /* Hero */
+
+    .iphone-section {
+
+        height: calc(100vh - 48px);
+
+        min-height: 600px;
+    }
+
+
+    .iphone-content {
+
+        padding-top: 35px;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .iphone-content h1 {
+
+        font-size: 42px;
+
+        letter-spacing: -0.01em;
+    }
+
+
+    .iphone-content p {
+
+        font-size: 21px;
+
+        margin-bottom: 19px;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+
+        gap: 10px;
+    }
+
+
+    .learn-btn,
+    .shop-btn {
+
+        height: 40px;
+
+        padding: 0 18px;
+
+        font-size: 14px;
+    }
+
+
+    /*
+       Mobile image
+    */
+
+    .iphone-bg {
+
+        width: auto;
+
+        min-width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center bottom;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .iphone-content {
+
+        padding-top: 30px;
+    }
+
+
+    .iphone-content h1 {
+
+        font-size: 38px;
+    }
+
+
+    .iphone-content p {
+
+        font-size: 19px;
+    }
+
+
+    .learn-btn,
+    .shop-btn {
+
+        height: 38px;
+
+        padding: 0 16px;
+
+        font-size: 13px;
+    }
+}
+
+/* =================================
+   COLLEGE SECTION
+================================= */
+
+.college-section {
+
+    width: 100%;
+
+    height: 680px;
+    margin: 12px auto;
+
+    background: #f5f5f7;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+/* =================================
+   TEXT CONTENT
+================================= */
+
+.college-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: 42px;
+
+    width: 100%;
+}
+
+
+/* =================================
+   MAIN HEADING
+================================= */
+
+.college-content h1 {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    letter-spacing: -0.003em;
+
+    color: #1d1d1f;
+
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   PARAGRAPH
+================================= */
+
+.college-content p {
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 24px;
+
+    line-height: 1.17;
+
+    font-weight: 400;
+
+    letter-spacing: 0.004em;
+
+    color: #1d1d1f;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   SHOP BUTTON
+================================= */
+
+.shop-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 40px;
+
+    padding: 0 20px;
+
+    border-radius: 980px;
+
+    background: #0071e3;
+
+    color: #ffffff;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    letter-spacing: -0.01em;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.shop-btn:hover {
+
+    background: #0077ed;
+
+    transform: scale(1.02);
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+.college-image {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 700px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+.college-image img {
+
+    width: 900px;
+
+    max-width: none;
+
+    height: 100%;
+
+    display: block;
+}
+
+
+/* =================================
+   LARGE SCREEN
+================================= */
+
+@media (min-width: 1200px) {
+
+    .college-section {
+
+        height: 600px;
+    }
+
+    .college-content {
+
+        padding-top: 45px;
+    }
+
+    .college-content h1 {
+
+        font-size: 52px;
+    }
+
+    .college-content p {
+
+        font-size: 25px;
+    }
+
+    .college-image {
+
+        height:460px;
+    }
+
+    .college-image img {
+
+        width: 1000px;
+    }
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .college-section {
+
+        height: 650px;
+    }
+
+    .college-content h1 {
+
+        font-size: 44px;
+    }
+
+    .college-content p {
+
+        font-size: 22px;
+    }
+
+    .college-image img {
+
+        width: 850px;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .college-section {
+
+        height: 600px;
+    }
+
+    .college-content {
+
+        padding: 35px 15px 0;
+    }
+
+    .college-content h1 {
+
+        font-size: 38px;
+
+        letter-spacing: -0.01em;
+    }
+
+    .college-content p {
+
+        font-size: 19px;
+
+        line-height: 1.2;
+    }
+
+    .college-content p br {
+
+        display: none;
+    }
+
+    .shop-btn {
+
+        height: 38px;
+
+        padding: 0 18px;
+
+        font-size: 15px;
+    }
+
+    .college-image {
+
+        height: 300px;
+    }
+
+    .college-image img {
+
+        width: 680px;
+
+        max-width: none;
+    }
+}
