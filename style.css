@@ -212,7 +212,24 @@ body {
 
     color: #777;
 }
-
+.menu-btn{
+       display: none;
+       width: 20px;
+       height: 15px;
+       border: none;
+       background: transparent;
+       padding: 0;
+       cursor: pointer;
+       flex-direction: column;
+       justify-content: space-between;
+}
+.menu-btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #1d1d1f;
+    border-radius: 2px;
+}
 
 /* =========================================
    IPHONE HERO SECTION
@@ -483,8 +500,9 @@ body {
 
     .iphone-content {
 
-        padding-top: 30px;
+            padding-top: 30px;
     }
+
 
 
     .iphone-content h1 {
@@ -2024,7 +2042,7 @@ body {
    MOBILE
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .apple-footer {
         padding: 25px 0 20px;
@@ -2126,41 +2144,53 @@ body {
     }
 
 }
+@media (max-width: 768px) {
 
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .entertainment-section {
-        padding: 55px 0 40px;
+    .nav-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
     }
 
-    .entertainment-section h2 {
-        font-size: 40px;
-        padding-left: 30px;
-        margin-bottom: 30px;
+    /* Apple logo */
+    .nav-logo {
+        flex-shrink: 0;
     }
 
-    .slider {
-        gap: 23px;
-        padding-left: 30px;
-        padding-right: 30px;
+    /* Search + Bag */
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-left: auto;
+        margin-right: 20px;
     }
 
-    .ent-card {
-        flex: 0 0 495px;
-        height: 890px;
+    /* Hamburger */
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        width: 30px;
+        height: 30px;
+
+        padding: 0;
+        border: none;
+        background: transparent;
     }
 
-    .card-content {
-        bottom: 45px;
-    }
-
-    .card-content p {
-        font-size: 22px;
+    .menu-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #111;
     }
 }
-
 /* ================================
    TABLET
 ================================ */
@@ -2346,7 +2376,7 @@ body {
    MOBILE
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .product-pair {
 
@@ -2376,7 +2406,7 @@ body {
    TABLET
 ========================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
 
     .nav-links {
 
@@ -2448,24 +2478,23 @@ body {
         gap: 20px;
     }
 
-
+  .menu-btn{
+    display: flex;
+  }
     /* Hero */
 
     .iphone-section {
 
         height: calc(100vh - 48px);
 
-        min-height: 600px;
+        min-height: 550px;
     }
 
 
     .iphone-content {
 
         padding-top: 35px;
-
-        padding-left: 15px;
-
-        padding-right: 15px;
+        width: 90%;
     }
 
 
@@ -2510,15 +2539,13 @@ body {
 
     .iphone-bg {
 
-        width: auto;
-
-        min-width: 100%;
+        width: 100%;
 
         height: 100%;
 
         object-fit: cover;
 
-        object-position: center bottom;
+        display: block;
     }
 }
 
@@ -2734,8 +2761,6 @@ body {
 
     width: 900px;
 
-    max-width: none;
-
     height: 100%;
 
     display: block;
@@ -2859,8 +2884,98 @@ body {
 
     .college-image img {
 
-        width: 680px;
+        width: 500px;
+    }
+}
+/* ==============================
+   ENTERTAINMENT MOBILE RESPONSIVE
+================================= */
 
-        max-width: none;
+@media (max-width: 768px) {
+
+    .entertainment-section {
+        width: 100%;
+        overflow: hidden;
+        padding: 50px 0 30px;
+    }
+
+    .entertainment-section h2 {
+        font-size: 32px;
+        line-height: 1.1;
+        text-align: center;
+        margin: 0 20px 30px;
+    }
+
+    .slider {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 0 20px 20px;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ent-card {
+        flex: 0 0 85%;
+        max-width: 85%;
+        height: 600px;
+
+        position: relative;
+        overflow: hidden;
+
+        scroll-snap-align: center;
+    }
+
+    .ent-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        object-fit: fill;
+        object-position: center;
+    }
+
+    .card-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+
+        padding: 20px;
+
+        text-align: center;
+        z-index: 2;
+    }
+
+    .card-content h3,
+    .card-content h2,
+    .card-content p {
+        margin: 10px 0;
+    }
+
+    .card-content p {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .card-content a {
+        display: inline-block;
+        margin-top: 15px;
+
+        padding: 12px 25px;
+        border-radius: 30px;
+
+        text-decoration: none;
+        background: white;
+        color: black;
+
+        font-size: 16px;
     }
 }
