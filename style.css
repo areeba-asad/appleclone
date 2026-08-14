@@ -2543,7 +2543,7 @@ body {
 
         height: 100%;
 
-        object-fit: contain;
+        object-fit:fill;
            object-position:center;
 
         display: block;
